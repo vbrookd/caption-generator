@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CaptionForge
+AI Instagram Caption Generator</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header class="hero">
+<h1>CaptionForge</h1>
+<p>Create Instagram captions instantly</p>
+</header>
+
+<main class="generator">
+
+<select id="category">
+<option value="travel">Travel</option>
+<option value="fitness">Fitness</option>
+<option value="food">Food</option>
+<option value="business">Business</option>
+<option value="coffee">Coffee</option>
+<option value="selfie">Selfie</option>
+</select>
+
+<button onclick="generateCaption()">Generate Captions</button>
+
+<button onclick="copyAll()">Copy All</button>
+
+<div id="caption-container"></div>
+
+</main>
+
+<footer>
+<p>Free Instagram Caption Generator</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
