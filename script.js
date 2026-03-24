@@ -35,7 +35,6 @@ business:["big goals","startup life","the hustle"],
 coffee:["morning coffee","espresso shots"],
 selfie:["selfie moments","self love"]
 }
-
 function generateCaption(){
 
 const category=document.getElementById("category").value
@@ -59,6 +58,7 @@ container.innerHTML+=`
 <button class="copy-btn" onclick="copyCaption('${caption}')">Copy</button>
 </div>
 `
+
 }
 
 }
@@ -88,5 +88,41 @@ function shareTool(){
 navigator.clipboard.writeText(window.location.href)
 
 alert("Link copied! Share it 🚀")
+
+}
+function copyHashtags(){
+
+const text=document.getElementById("caption-container").innerText
+
+navigator.clipboard.writeText(text)
+
+alert("Hashtags copied!")
+
+}
+function generateBulkCaptions(){
+
+const category=document.getElementById("category").value
+const container=document.getElementById("caption-container")
+
+container.innerHTML=""
+
+for(let i=0;i<100;i++){
+
+let starter=starters[Math.floor(Math.random()*starters.length)]
+let action=actions[Math.floor(Math.random()*actions.length)]
+let topic=topics[category][Math.floor(Math.random()*topics[category].length)]
+let mood=moods[Math.floor(Math.random()*moods.length)]
+let ending=endings[Math.floor(Math.random()*endings.length)]
+
+let caption=`${starter} ${action} ${topic} ${mood} ${ending}`
+
+container.innerHTML+=`
+<div class="caption-card">
+<span>${caption}</span>
+<button class="copy-btn" onclick="copyCaption('${caption}')">Copy</button>
+</div>
+`
+
+}
 
 }

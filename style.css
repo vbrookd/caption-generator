@@ -31,8 +31,8 @@ padding:30px;
 border-radius:16px;
 box-shadow:0 20px 60px rgba(0,0,0,0.4);
 margin-top:40px;
-width:420px;
-max-width:90%;
+width:100%;
+max-width:420px;
 }
 
 select,button{
@@ -62,8 +62,7 @@ margin-top:20px;
 display:flex;
 flex-direction:column;
 gap:10px;
-width:400px;
-max-width:90%;
+width:100%;
 }
 
 .caption-card{
@@ -97,4 +96,23 @@ footer{
 margin-top:80px;
 text-align:center;
 opacity:0.8;
+}
+.bulk-btn{
+background:linear-gradient(90deg,#ec4899,#8b5cf6);
+box-shadow:0 8px 25px rgba(236,72,153,0.4);
+}
+@media (max-width:600px){
+
+.hero h1{
+font-size:32px;
+}
+
+.generator{
+padding:20px;
+}
+
+button{
+font-size:15px;
+}
+
 }
