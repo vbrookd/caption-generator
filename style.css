@@ -1,66 +1,115 @@
-body{
-margin:0;
-font-family:'Inter',sans-serif;
-background:linear-gradient(135deg,#0f172a,#1e293b);
-color:white;
-display:flex;
-flex-direction:column;
-align-items:center;
-min-height:100vh;
-}
+<!DOCTYPE html>
+<html lang="en">
 
-.hero{
-text-align:center;
-margin-top:80px;
-}
+<head>
 
-.hero h1{
-font-size:48px;
-background:linear-gradient(90deg,#6366f1,#8b5cf6);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-.generator{
-margin-top:40px;
-background:rgba(255,255,255,0.05);
-padding:40px;
-border-radius:16px;
-backdrop-filter:blur(12px);
-width:420px;
-}
+<meta name="description" content="Generate viral Instagram captions instantly. Free caption generator for travel, fitness, food, business and more.">
 
-select,button{
-width:100%;
-padding:14px;
-margin-top:12px;
-border:none;
-border-radius:10px;
-font-size:16px;
-}
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-button{
-background:linear-gradient(90deg,#6366f1,#8b5cf6);
-color:white;
-cursor:pointer;
-}
+<title>Free Instagram Caption Generator | CaptionGen</title>
 
-button:hover{
-transform:scale(1.05);
-}
+</head>
 
-#caption-container{
-margin-top:20px;
-display:flex;
-flex-direction:column;
-gap:10px;
-}
+<body>
 
-.caption-card{
-background:rgba(255,255,255,0.08);
-padding:14px;
-border-radius:10px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
+<header class="top-nav">
+
+<div class="logo">CaptionGen</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#tools">Tools</a>
+<a href="#captions">Captions</a>
+</nav>
+
+</header>
+
+
+<div class="hero">
+
+<h1>Instagram Caption Generator</h1>
+<p>Create viral captions instantly</p>
+
+</div>
+
+
+<main class="generator">
+
+<label for="category">Choose Caption Type</label>
+
+<select id="category">
+
+<option value="travel">Travel</option>
+<option value="fitness">Fitness</option>
+<option value="food">Food</option>
+<option value="business">Business</option>
+<option value="coffee">Coffee</option>
+<option value="selfie">Selfie</option>
+
+</select>
+
+<button onclick="generateCaption()">Generate Captions</button>
+<button onclick="copyAll()">Copy All</button>
+<button onclick="shareTool()">Share Tool</button>
+
+<div id="caption-container"></div>
+
+</main>
+
+
+<section id="tools" class="more-tools">
+
+<h2>More Free Tools</h2>
+
+<div class="tool-grid">
+
+<div class="tool-card">
+<a href="#">Hashtag Generator</a>
+</div>
+
+<div class="tool-card">
+<a href="#">TikTok Caption Generator</a>
+</div>
+
+<div class="tool-card">
+<a href="#">Instagram Bio Generator</a>
+</div>
+
+<div class="tool-card">
+<a href="#">YouTube Title Generator</a>
+</div>
+
+</div>
+
+</section>
+
+
+<section id="captions" class="seo-content">
+
+<h2>Best Instagram Captions</h2>
+
+<p>
+Our free Instagram caption generator helps creators write viral captions
+for travel, fitness, food and business posts.
+Generate unlimited captions instantly.
+</p>
+
+</section>
+
+
+<footer>
+
+<p>Free caption generator tool</p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
