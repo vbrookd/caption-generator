@@ -1,10 +1,12 @@
 body{
 margin:0;
 font-family:'Inter',sans-serif;
+
 background:
 radial-gradient(circle at 20% 20%,#6366f122,transparent),
 radial-gradient(circle at 80% 80%,#8b5cf622,transparent),
 linear-gradient(135deg,#0f172a,#1e293b);
+
 color:white;
 display:flex;
 flex-direction:column;
@@ -12,17 +14,21 @@ align-items:center;
 min-height:100vh;
 }
 
+/* HERO */
+
 .hero{
 text-align:center;
-margin-top:80px;
+margin-top:60px;
 }
 
 .hero h1{
-font-size:48px;
+font-size:42px;
 background:linear-gradient(90deg,#6366f1,#8b5cf6);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 }
+
+/* GENERATOR BOX */
 
 .generator{
 background:rgba(255,255,255,0.05);
@@ -31,9 +37,29 @@ padding:30px;
 border-radius:16px;
 box-shadow:0 20px 60px rgba(0,0,0,0.4);
 margin-top:40px;
-width:100%;
-max-width:420px;
+width:420px;
+max-width:90%;
+text-align:center;
 }
+
+/* 3D EMOJI */
+
+.emoji-display{
+font-size:70px;
+margin-bottom:15px;
+animation:float 3s ease-in-out infinite;
+filter:drop-shadow(0 10px 20px rgba(0,0,0,0.4));
+}
+
+/* FLOAT ANIMATION */
+
+@keyframes float{
+0%{transform:translateY(0px);}
+50%{transform:translateY(-10px);}
+100%{transform:translateY(0px);}
+}
+
+/* INPUTS */
 
 select,button{
 width:100%;
@@ -43,6 +69,8 @@ border:none;
 border-radius:10px;
 font-size:16px;
 }
+
+/* BUTTONS */
 
 button{
 background:linear-gradient(90deg,#6366f1,#8b5cf6);
@@ -57,12 +85,18 @@ transform:translateY(-2px);
 box-shadow:0 15px 40px rgba(139,92,246,0.6);
 }
 
+.bulk-btn{
+background:linear-gradient(90deg,#ec4899,#8b5cf6);
+box-shadow:0 8px 25px rgba(236,72,153,0.4);
+}
+
+/* CAPTIONS */
+
 #caption-container{
 margin-top:20px;
 display:flex;
 flex-direction:column;
 gap:10px;
-width:100%;
 }
 
 .caption-card{
@@ -87,32 +121,13 @@ background:#111827;
 padding:6px 12px;
 font-size:14px;
 border-radius:6px;
-border:none;
 color:white;
 cursor:pointer;
 }
 
+/* FOOTER */
+
 footer{
-margin-top:80px;
-text-align:center;
-opacity:0.8;
-}
-.bulk-btn{
-background:linear-gradient(90deg,#ec4899,#8b5cf6);
-box-shadow:0 8px 25px rgba(236,72,153,0.4);
-}
-@media (max-width:600px){
-
-.hero h1{
-font-size:32px;
-}
-
-.generator{
-padding:20px;
-}
-
-button{
-font-size:15px;
-}
-
+margin-top:60px;
+opacity:0.7;
 }

@@ -23,9 +23,7 @@ const moods=[
 "magic"
 ]
 
-const endings=[
-"✨","🔥","🚀","🌍","📸","☕"
-]
+const endings=["✨","🔥","🚀","🌍","📸","☕"]
 
 const topics={
 travel:["new places","sunsets","adventures"],
@@ -35,10 +33,24 @@ business:["big goals","startup life","the hustle"],
 coffee:["morning coffee","espresso shots"],
 selfie:["selfie moments","self love"]
 }
+
+/* EMOJI MAP */
+const emojiMap={
+travel:"🌍",
+fitness:"💪",
+food:"🍕",
+business:"🚀",
+coffee:"☕",
+selfie:"📸"
+}
+
 function generateCaption(){
 
 const category=document.getElementById("category").value
 const container=document.getElementById("caption-container")
+
+/* CHANGE EMOJI */
+document.getElementById("emoji").innerText=emojiMap[category]
 
 container.innerHTML=""
 
@@ -58,9 +70,7 @@ container.innerHTML+=`
 <button class="copy-btn" onclick="copyCaption('${caption}')">Copy</button>
 </div>
 `
-
 }
-
 }
 
 function copyCaption(text){
@@ -87,18 +97,9 @@ function shareTool(){
 
 navigator.clipboard.writeText(window.location.href)
 
-alert("Link copied! Share it 🚀")
-
+alert("Link copied! 🚀")
 }
-function copyHashtags(){
 
-const text=document.getElementById("caption-container").innerText
-
-navigator.clipboard.writeText(text)
-
-alert("Hashtags copied!")
-
-}
 function generateBulkCaptions(){
 
 const category=document.getElementById("category").value
@@ -122,7 +123,5 @@ container.innerHTML+=`
 <button class="copy-btn" onclick="copyCaption('${caption}')">Copy</button>
 </div>
 `
-
 }
-
 }

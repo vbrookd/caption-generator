@@ -1,23 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VR1N5GVQXZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-VR1N5GVQXZ');
-</script>
-
-<title>CaptionForge – Free Instagram Caption Generator</title>
-
-<meta name="description" content="Generate viral Instagram captions instantly for travel, fitness, food, business and more.">
+<title>CaptionForge – 3D Emoji Caption Generator</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -29,43 +17,34 @@
 
 <header class="hero">
 <h1>CaptionForge</h1>
-<p>Create viral Instagram captions instantly</p>
+<p>Create Instagram captions instantly</p>
 </header>
 
 <main class="generator">
 
-<select id="category">
+<!-- 3D Emoji -->
+<div id="emoji" class="emoji-display">😎</div>
 
+<select id="category">
 <option value="travel">Travel</option>
 <option value="fitness">Fitness</option>
 <option value="food">Food</option>
 <option value="business">Business</option>
 <option value="coffee">Coffee</option>
 <option value="selfie">Selfie</option>
-
 </select>
 
 <button onclick="generateCaption()">Generate Captions</button>
-
 <button onclick="copyAll()">Copy All</button>
-
 <button onclick="shareTool()">Share Tool</button>
-<button onclick="copyHashtags()">Copy Hashtags</button>
-<button onclick="generateCaption()">Generate Captions</button>
-
-<button onclick="generateBulkCaptions()">Generate 100 Captions</button>
 <button class="bulk-btn" onclick="generateBulkCaptions()">Generate 100 Captions</button>
-<button onclick="copyAll()">Copy All</button>
-<button onclick="shareTool()">Share Tool</button>
 
 <div id="caption-container"></div>
 
 </main>
 
 <footer>
-
 <p>© CaptionForge – Free Instagram Caption Generator</p>
-
 </footer>
 
 <script src="script.js"></script>
