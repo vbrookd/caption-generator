@@ -1,133 +1,71 @@
-const starters = [
+const starters=[
 "Just another",
 "Weekend",
 "Late night",
 "Living my best",
 "Another day of",
-"Currently enjoying",
-"Nothing but",
-"Straight",
-"Chasing",
-"Powered by"
+"Currently enjoying"
 ]
 
-const actions = [
-"enjoying",
-"living",
+const actions=[
 "exploring",
-"chasing",
-"capturing",
+"living",
 "creating",
-"embracing",
-"celebrating",
-"building",
-"discovering"
+"capturing",
+"celebrating"
 ]
 
-const moods = [
+const moods=[
 "vibes",
 "energy",
 "moments",
 "memories",
-"mode",
-"mood",
-"magic",
-"lifestyle"
+"magic"
 ]
 
-const endings = [
-"✨",
-"🔥",
-"🚀",
-"🌍",
-"📸",
-"☕",
-"💪",
-"🌅"
+const endings=[
+"✨","🔥","🚀","🌍","📸","☕"
 ]
 
-const topics = {
-
-travel:["travel","adventures","sunsets","passport life","new places"],
-
-fitness:["gym","training","fitness grind","strong days","workout life"],
-
-food:["good food","brunch time","dessert moments","pizza nights"],
-
-business:["hustle","business moves","startup life","big goals"],
-
-coffee:["morning coffee","espresso life","coffee breaks"],
-
-selfie:["selfie time","camera moments","self love"]
-
-}
-
-const hashtags={
-travel:["#travel","#wanderlust","#explore","#travelgram"],
-fitness:["#fitness","#gym","#workout","#fitlife"],
-food:["#food","#foodie","#instafood","#delicious"],
-business:["#business","#entrepreneur","#startup","#hustle"],
-coffee:["#coffee","#coffeelover","#morningcoffee"],
-selfie:["#selfie","#selfielove","#photooftheday"]
-
+const topics={
+travel:["new places","sunsets","adventures"],
+fitness:["the gym","training","workouts"],
+food:["good food","dessert time","pizza nights"],
+business:["big goals","startup life","the hustle"],
+coffee:["morning coffee","espresso shots"],
+selfie:["selfie moments","self love"]
 }
 
 function generateCaption(){
 
-const category = document.getElementById("category").value
-const container = document.getElementById("caption-container")
-
-container.innerHTML = "Generating captions..."
-
-setTimeout(()=>{
+const category=document.getElementById("category").value
+const container=document.getElementById("caption-container")
 
 container.innerHTML=""
 
 for(let i=0;i<10;i++){
 
-let starter = starters[Math.floor(Math.random()*starters.length)]
-let action = actions[Math.floor(Math.random()*actions.length)]
-let topic = topics[category][Math.floor(Math.random()*topics[category].length)]
-let mood = moods[Math.floor(Math.random()*moods.length)]
-let ending = endings[Math.floor(Math.random()*endings.length)]
+let starter=starters[Math.floor(Math.random()*starters.length)]
+let action=actions[Math.floor(Math.random()*actions.length)]
+let topic=topics[category][Math.floor(Math.random()*topics[category].length)]
+let mood=moods[Math.floor(Math.random()*moods.length)]
+let ending=endings[Math.floor(Math.random()*endings.length)]
 
-let caption = `${starter} ${action} ${topic} ${mood} ${ending}`
+let caption=`${starter} ${action} ${topic} ${mood} ${ending}`
 
 container.innerHTML+=`
-<div class="caption-card" style="animation-delay:${i*0.1}s">
+<div class="caption-card">
 <span>${caption}</span>
 <button class="copy-btn" onclick="copyCaption('${caption}')">Copy</button>
 </div>
 `
-
 }
-
-generateHashtags(category)
-
-},300)
-
-}
-
-function generateHashtags(category){
-
-const container=document.getElementById("caption-container")
-
-let tags=hashtags[category].join(" ")
-
-container.innerHTML+=`
-<div class="caption-card">
-<span>${tags}</span>
-<button onclick="copyCaption('${tags}')">Copy</button>
-</div>
-`
 
 }
 
 function copyCaption(text){
-
 navigator.clipboard.writeText(text)
 alert("Copied!")
-
 }
 
 function copyAll(){
@@ -143,13 +81,11 @@ text+=c.innerText+"\n"
 navigator.clipboard.writeText(text)
 
 alert("All copied!")
-
 }
 
 function shareTool(){
 
-const url = window.location.href
-navigator.clipboard.writeText(url)
+navigator.clipboard.writeText(window.location.href)
 
 alert("Link copied! Share it 🚀")
 
